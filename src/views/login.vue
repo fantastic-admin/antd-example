@@ -7,6 +7,7 @@ meta:
 
 <script setup lang="ts">
 import type { Rule } from 'ant-design-vue/es/form'
+import { message } from 'ant-design-vue'
 import Copyright from '@/layouts/components/Copyright/index.vue'
 import useUserStore from '@/store/modules/user'
 
@@ -95,11 +96,10 @@ const registerRules = ref<Record<string, Rule[]>>({
   ],
 })
 function handleRegister() {
-  // ElMessage({
-  //   message: '注册模块仅提供界面演示，无实际功能，需开发者自行扩展',
-  //   type: 'warning',
-  // })
+  message.info('注册模块仅提供界面演示，无实际功能，需开发者自行扩展')
   registerFormRef.value && registerFormRef.value.validate().then(() => {
+    // 这里编写业务代码
+  }).catch(() => {
     // 这里编写业务代码
   })
 }
@@ -124,11 +124,10 @@ const resetRules = ref<Record<string, Rule[]>>({
   ],
 })
 function handleReset() {
-  // ElMessage({
-  //   message: '重置密码仅提供界面演示，无实际功能，需开发者自行扩展',
-  //   type: 'info',
-  // })
+  message.info('重置密码仅提供界面演示，无实际功能，需开发者自行扩展')
   resetFormRef.value && resetFormRef.value.validate().then(() => {
+    // 这里编写业务代码
+  }).catch(() => {
     // 这里编写业务代码
   })
 }
@@ -218,8 +217,10 @@ function testAccount(account: string) {
               <template #prefix>
                 <svg-icon name="ic:baseline-verified-user" />
               </template>
-              <template #append>
-                <a-button>发送验证码</a-button>
+              <template #suffix>
+                <a-button size="small">
+                  发送验证码
+                </a-button>
               </template>
             </a-input>
           </a-form-item>
@@ -267,8 +268,10 @@ function testAccount(account: string) {
               <template #prefix>
                 <svg-icon name="ic:baseline-verified-user" />
               </template>
-              <template #append>
-                <a-button>发送验证码</a-button>
+              <template #suffix>
+                <a-button size="small">
+                  发送验证码
+                </a-button>
               </template>
             </a-input>
           </a-form-item>
