@@ -9,6 +9,9 @@ const globalSettings: Settings.all = {
   layout: {
     enableMobileAdaptation: true,
   },
+  toolbar: {
+    enableColorScheme: true,
+  },
   copyright: {
     enable: true,
     dates: '2020-present',

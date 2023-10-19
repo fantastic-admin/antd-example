@@ -3,6 +3,7 @@ import eruda from 'eruda'
 import VConsole from 'vconsole'
 import hotkeys from 'hotkeys-js'
 import antDesignVueLocaleZhCN from 'ant-design-vue/es/locale/zh_CN'
+import { theme } from 'ant-design-vue'
 import eventBus from './utils/eventBus'
 import useSettingsStore from '@/store/modules/settings'
 import useMenuStore from '@/store/modules/menu'
@@ -70,7 +71,7 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 </script>
 
 <template>
-  <a-config-provider :locale="antDesignVueLocaleZhCN">
+  <a-config-provider :locale="antDesignVueLocaleZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}">
     <router-view
       v-slot="{ Component, route }"
       :style="{
