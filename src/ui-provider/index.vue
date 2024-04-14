@@ -7,7 +7,7 @@ const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <AConfigProvider :locale="antDesignVueLocaleZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}">
+  <AConfigProvider :locale="antDesignVueLocaleZhCN" :theme="settingsStore.currentColorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}">
     <slot />
   </AConfigProvider>
 </template>
