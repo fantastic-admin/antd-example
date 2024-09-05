@@ -1,0 +1,1 @@
+import{d as t,v as n,z as a,o as r,j as s,x as e}from"./index-GWTLD77q.js";const c=t({__name:"reload",setup(u){const o=n();return a(()=>{o.go(-1)}),(p,_)=>(r(),s("div"))}});typeof e=="function"&&e(c);export{c as default};
