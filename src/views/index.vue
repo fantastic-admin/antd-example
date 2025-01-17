@@ -59,7 +59,7 @@ const data = [
 
 <template>
   <div>
-    <PageHeader>
+    <FaPageHeader>
       <template #title>
         <div class="flex items-center gap-4">
           欢迎使用 Fantastic-admin
@@ -70,8 +70,8 @@ const data = [
           本演示站基于 Fantastic-admin 源码开发，将 Element Plus 替换为 Ant Design Vue ，详细操作步骤请阅读官方文档。
         </div>
       </template>
-    </PageHeader>
-    <PageMain>
+    </FaPageHeader>
+    <FaPageMain>
       <ASpace wrap>
         <AButton type="primary">
           Primary Button
@@ -87,14 +87,14 @@ const data = [
           Link Button
         </AButton>
       </ASpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ASpace direction="vertical">
         <AInput v-model:value="inputValue" placeholder="Basic usage" />
         <AInput v-model:value.lazy="inputValue1" autofocus placeholder="Lazy usage" />
       </ASpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ARadioGroup v-model:value="radioValue">
         <ARadio :value="1">
           A
@@ -109,8 +109,8 @@ const data = [
           D
         </ARadio>
       </ARadioGroup>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ASpace direction="vertical" :size="12">
         <ADatePicker v-model:value="datePickerValue1" />
         <ADatePicker v-model:value="datePickerValue2" picker="week" />
@@ -118,25 +118,25 @@ const data = [
         <ADatePicker v-model:value="datePickerValue4" picker="quarter" />
         <ADatePicker v-model:value="datePickerValue5" picker="year" />
       </ASpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ARate v-model:value="rateValue" />
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ASpace>
         <ASelect v-model:value="selectValue1" style="width: 120px;" :options="selectOptions1" />
         <ASelect v-model:value="selectValue2" style="width: 120px;" disabled :options="selectOptions2" />
         <ASelect v-model:value="selectValue3" style="width: 120px;" loading :options="selectOptions3" />
       </ASpace>
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ASlider id="test" v-model:value="sliderValue1" />
       <ASlider v-model:value="sliderValue2" range />
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ASwitch v-model:checked="switchChecked" />
-    </PageMain>
-    <PageMain>
+    </FaPageMain>
+    <FaPageMain>
       <ATable :columns="columns" :data-source="data">
         <template #headerCell="{ column }">
           <template v-if="column.key === 'name'">
@@ -175,6 +175,6 @@ const data = [
           </template>
         </template>
       </ATable>
-    </PageMain>
+    </FaPageMain>
   </div>
 </template>
